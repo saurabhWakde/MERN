@@ -10,3 +10,30 @@ const value = Symbol("123")
 let date = new Date
 // console.table({id,value,})
 console.log(typeof date)
+
+
+
+
+// **************************
+// Stack(Primitive) , Heap(Non Primitive)
+
+let firtName = "saurabh"
+let anotherName = firtName
+anotherName = "rahul"
+
+let user ={
+    email :"N9dJt@example.com",
+    password :"1234"
+}
+let anotherUser = user
+anotherUser.email = "saurabhwakde430@gmail.com" // both values got chnaged
+// ┌─────────────┬─────────────────────────────┬──────────┬───────────┐
+// │ (index)     │ email                       │ password │ Values    │
+// ├─────────────┼─────────────────────────────┼──────────┼───────────┤
+// │ firtName    │                             │          │ 'saurabh' │
+// │ anotherName │                             │          │ 'rahul'   │
+// │ user        │ 'saurabhwakde430@gmail.com' │ '1234'   │           │
+// │ anotherUser │ 'saurabhwakde430@gmail.com' │ '1234'   │           │
+// └─────────────┴─────────────────────────────┴──────────┴───────────┘
+console.table({firtName,anotherName,user,anotherUser})
+
